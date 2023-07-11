@@ -13,7 +13,6 @@ document.getElementById('inputfile')
             .addEventListener('change', function() {
             let f = this.value
             f = f.replace(/.*[\/\\]/, '').replace('.txt','');
-            alert(f)
             var fr=new FileReader();
             fr.onload=function(){
                 let content = fr.result;
