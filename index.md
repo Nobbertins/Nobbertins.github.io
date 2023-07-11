@@ -5,7 +5,6 @@
 </head>
 <body>
 <input type="file" id="inputfile" accept=".txt">
-<p id="output"> hello</p>
 <script>
  function is_number(char) {
     return !isNaN(parseInt(char));
@@ -30,7 +29,6 @@ document.getElementById('inputfile')
     finalText += lines[i].trim();
     finalText += '\n';
   }
-document.getElementById("output").textContent = finalText;
 // Create element with <a> tag
     const link = document.createElement("a");
 
