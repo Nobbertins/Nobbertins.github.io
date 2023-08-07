@@ -4,7 +4,6 @@
 <title>Timestamp Remover</title>
 </head>
 <body>
-<input type="file" id="inputfile" accept=".txt">
 <script>
  function requestFullScreen(element) {
     // Supports most browsers and their versions.
