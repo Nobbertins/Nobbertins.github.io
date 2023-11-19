@@ -40,7 +40,7 @@ body {
         </div>    
         <script>
           let dropzone = document.getElementById("dropzone");
-let files = []
+let fileArray = []
 function scanFiles(item) {
   if (item.isDirectory) {
     let directoryReader = item.createReader();
@@ -51,7 +51,7 @@ function scanFiles(item) {
     }, (error)=>{console.log(error);});
   }
   else{
-    files.append(item);
+    fileArray.append(item);
   }
 }
 dropzone.addEventListener(
@@ -73,7 +73,7 @@ dropzone.addEventListener(
 
       if (item) {
         scanFiles(item);
-        console.log(files[0].text());
+        console.log(fileArray[0].text());
 /*
 const link = document.createElement("a");
 
