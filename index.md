@@ -51,7 +51,7 @@ function scanFiles(item) {
     }, (error)=>{console.log(error);});
   }
   else{
-    fileNames.append(item);
+    files.append(item);
   }
 }
 dropzone.addEventListener(
