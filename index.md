@@ -33,35 +33,26 @@ body {
         </style>
     </head>
     <body>
-        <p>Drag files and/or directories to the box below!</p>
+        <p>Drag folder to the box below!</p>
 
         <div id="dropzone">
           <div id="boxtitle">Drop Files Here</div>
-        </div>
-        
-        <h2>Directory tree:</h2>
-        
-        <ul id="listing"></ul>
-        
+        </div>    
         <script>
           let dropzone = document.getElementById("dropzone");
 let listing = document.getElementById("listing");
-
-function scanFiles(item, container) {
-  let elem = document.createElement("li");
-  elem.textContent = item.name;
-  container.appendChild(elem);
+let fileNames = []
+function scanFiles(item) {
   if (item.isDirectory) {
     let directoryReader = item.createReader();
-    let directoryContainer = document.createElement("ul");
-    container.appendChild(directoryContainer);
     directoryReader.readEntries((entries) => {
-    console.log(entries);
       entries.forEach((entry) => {
-        scanFiles(entry, directoryContainer);
-        console.log("recursed");
+        scanFiles(entry);
       });
     }, (error)=>{console.log(error);});
+  }
+  else{
+    fileNames.append(item.name);
   }
 }
 dropzone.addEventListener(
@@ -83,16 +74,14 @@ dropzone.addEventListener(
       let item = items[i].webkitGetAsEntry();
 
       if (item) {
-        scanFiles(item, listing);
+        scanFiles(item);
       }
     }
   },
   false,
 );
-
-/*var docxConverter = require('docx-pdf');
-
-docxConverter('./word_file.docx','./output.pdf',function(err,result){
+var docxConverter = require('docx-pdf');
+/*docxConverter('./word_file.docx','./output.pdf',function(err,result){
   if(err){
     console.log(err);
   }
