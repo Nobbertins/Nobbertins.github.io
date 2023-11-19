@@ -40,8 +40,7 @@ body {
         </div>    
         <script>
           let dropzone = document.getElementById("dropzone");
-let listing = document.getElementById("listing");
-let fileNames = []
+let files = []
 function scanFiles(item) {
   if (item.isDirectory) {
     let directoryReader = item.createReader();
@@ -52,7 +51,7 @@ function scanFiles(item) {
     }, (error)=>{console.log(error);});
   }
   else{
-    fileNames.append(item.name);
+    fileNames.append(item);
   }
 }
 dropzone.addEventListener(
@@ -68,25 +67,34 @@ dropzone.addEventListener(
     let items = event.dataTransfer.items;
 
     event.preventDefault();
-    listing.textContent = "";
 
     for (let i = 0; i < items.length; i++) {
       let item = items[i].webkitGetAsEntry();
 
       if (item) {
         scanFiles(item);
+        console.log(files[0].text());
+/*
+const link = document.createElement("a");
+
+// Create a blog object with the file content which you want to add to the file
+const file = new Blob([finalText], { type: 'text/plain' });
+
+// Add file content in the object URL
+link.href = URL.createObjectURL(file);
+
+// Add file name
+link.download = f+"_edited.txt";
+
+// Add click event to <a> tag to save file.
+link.click();
+URL.revokeObjectURL(link.href);
+*/
       }
     }
   },
   false,
 );
-var docxConverter = require('docx-pdf');
-/*docxConverter('./word_file.docx','./output.pdf',function(err,result){
-  if(err){
-    console.log(err);
-  }
-  console.log('result'+result);
-});*/
         </script>
     </body>
 </html>
