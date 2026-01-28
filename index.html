@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayaan Dhuka Projects</title>
+    <style>
+        body {
+            max-width: min(70%, 1000px);
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 30px;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            margin-left: 20px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            margin-top: 30px;
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .project {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .project-content {
+            flex: 1;
+        }
+
+        .project-media {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .project-media img,
+        .project-media video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .media-caption {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .date {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .award {
+            color: #888;
+            font-size: 0.85em;
+            font-style: italic;
+            margin: 2px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+            
+            .profile-pic {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .project {
+                flex-direction: column;
+            }
+
+            .project-media {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-text">
+            <h1>Ayaan Dhuka</h1>
+            <p><a href="https://github.com/Nobbertins" target="_blank">github.com/Nobbertins</a> | ayaandhuka@gmail.com</p>
+        </div>
+        <img src="media/ayaanpfp.jpeg" alt="Ayaan Dhuka" class="profile-pic">
+    </div>
+
+    <h2>About</h2>
+    <p>Hi, I'm Ayaan, an ECE major at UT Austin. I like building stuff involving electronics and software, and I made this page to keep track of projects I'm proud of.</p>
+    
+    <h2>Longhorn Racing (2025 - Present)</h2>
+    <p>I'm currently working on embedded systems software for <a href="https://www.longhornracing.org/" target="_blank">Longhorn Racing</a>'s combustion engine car for the Formula SAE competition. This section contains some of projects I've done in the team.</p>
+    
+    <div class="project">
+        <div class="project-content">
+            <h3>Automatic Lap Timer</h3>
+            <p class="date">January 2026 – Present</p>
+            <p>Currently building a wireless lap timing system using multiple ESP32 boards with ESP-NOW for communication and a Python UI built with Tkinter for real-time display and data logging.</p>
+            <p><a href="https://github.com/LHRIC/Custom-Lap-Timer" target="_blank">source code</a></p>
+        </div>
+        <div class="project-media">
+            <!-- <img src="media/laptimer.jpg" alt="Lap timer"> -->
+            <!-- <div style="width: 100%; aspect-ratio: 4/3; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 0.85em; color: #888; border-radius: 4px;">Add image</div> -->
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Custom Driver Display</h3>
+            <p class="date">September 2025 – December 2025</p>
+            <p>Built a driver information display for the car using an STM32H7 microcontroller and an LCD. The STM32 reads data from the ECU via the car's CAN bus and displays the data on the LCD. Developed the software in C and C++ using TouchGFX (an embedded graphics library).</p>
+            <p><a href="https://github.com/LHRIC/CustomDisplay" target="_blank">source code</a></p>
+        </div>
+        <div class="project-media">
+            <!-- <img src="media/display.jpg" alt="Graphics display">
+            <div style="width: 100%; aspect-ratio: 4/3; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 0.85em; color: #888; border-radius: 4px;">Add image</div> -->
+        </div>
+    </div>
+
+    <h2>Robotics Projects (2022 - 2025)</h2>
+    <p>In high school, I teamed up with two friends to make year-long robotics projects for science and engineering fairs. I focused on the embedded systems and software for the projects. This section contains the work I did for the 3 projects we made.</p>
+    
+    <div class="project">
+        <div class="project-content">
+            <h3>Autonomous Drone for 3D Mapping with LiDAR</h3>
+            <p class="date">August 2024 – May 2025</p>
+            <p class="award">3rd in Robotics at SEFH (Science and Engineering Fair of Houston)</p>
+            <p>Team developed an autonomous quadcopter for 3D scanning. I programmed and tuned a PID-based flight controller from scratch on an STM32F1 microcontroller using C. I also programmed an UDOO x86 Ultra in Python to store scans from a CubeEye LiDAR and camera images.</p>
+            <p><a href="https://github.com/Nobbertins/FlightController" target="_blank">flight controller source code</a></p>
+        </div>
+        <div class="project-media">
+            <img src="media/lidardrone.png" alt="the quadcopter in flight">
+            <video controls>
+                <source src="media/SEFH 2025 Display Video.mp4" type="video/mp4"/>
+            </video>
+            <p class="media-caption">PID Tuning Process and Final Demo Video</p>
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Easy AED: VTOL Emergency Equipment Delivery Drone</h3>
+            <p class="date">August 2023 – May 2024</p>
+            <p class="award">2nd in Robotics at ISEF (International Science and Engineering Fair) - $2000</p>
+            <p class="award">1st in Robotics at TXSEF (Texas Science and Engineering Fair) - $750</p>
+            <p class="award">Engineering Grand Award at SEFH</p>
+            <p>Team built a VTOL hybrid drone system to deliver emergency equipment like AEDs. I created the full communication subsystem that included a mobile app built with React Native for the system's user, an AWS-hosted RESTful API, and an ESP32 with LoRA (long range radio) communication all for data transfer between a user app, the cloud, and the drone.</p>
+            <p><a href="media/vtolcomms.png" target="_blank">View communication flowchart →</a></p>
+            <p>Source code is private because it contains sensitive info (API endpoint links, passwords, etc.)</p>
+        </div>
+        <div class="project-media">
+            <img src="media/vtoldrone.png" alt="VTOL drone">
+            <img src="media/vtolapp.png" alt="user app" style="width:50%; display: block; margin: 0 auto;">
+            <!-- <img src="media/vtolcomms.png" alt="comms flowchart"> -->
+            <!-- <video controls>
+                <source src="media/vtol-demo.mp4" type="video/mp4"/>
+            </video>
+            <p class="media-caption">Your caption here</p> -->
+            <!-- <div style="width: 100%; aspect-ratio: 4/3; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 0.85em; color: #888; border-radius: 4px;">Add image/video</div> -->
+        </div>
+    </div>
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Automatic Chessboard</h3>
+            <p class="date">August 2022 – May 2023</p>
+            <p class="award">2nd in Robotics ISEF - $2000</p>
+            <p class="award">CIA Special Award at ISEF - $1000</p>
+            <p class="award">Engineering Grand Award at SEFH</p>
+            <p>Team built an automatic physical chessboard for playing against an AI. I developed a piece detection algorithm using 64 hall effect sensors and a piece movement algorithm using an electromagnet under the board and 4 stepper motors connected to strings. I developed a minimax chess engine on an Orange Pi 5 in Python with alpha-beta optimization, an opening database, iterative deepening, Zobrist hashing for a transposition lookup table, and more.</p>
+            <p><a href="https://github.com/Nobbertins/ISEF-Chess-Project" target="_blank">chess engine source code</a></p>
+        </div>
+        <div class="project-media">
+            <img src="media/chessfinalboard.png" alt="Chessboard">
+            <video controls>
+                <source src="media/chessvideo.mp4" type="video/mp4"/>   
+            </video>
+            <p class="media-caption">Project Overview and Demo</p>
+            <!-- <div style="width: 100%; aspect-ratio: 4/3; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 0.85em; color: #888; border-radius: 4px;">Add image/video</div> -->
+        </div>
+    </div>
+</body>
+</html>
