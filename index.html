@@ -140,7 +140,7 @@
         <div class="project-content">
             <h3>Musical Monsters</h3>
             <p class="date">April 2026</p>
-            <p>This game is a first person shooter like Wolfenstein 3D, but you enter game inputs by playing music into a microphone. Though it was technically a school project, the assignment was open-ended enough that my partner and I could make whatever we wanted. I wrote the raycasting engine, gameplay, and most of the hardware interfaces from scratch in C. I found <a href = "https://timallanwheeler.com/blog/2023/04/01/wolfenstein-3d-raycasting-in-c/" target = "_blank">Tim Wheeler's raycasting blog</a> useful for learning the key concepts. Also, my lab partner wrote the Fast Fourier Transform algorithm for the audio processing, and I integrated it into the gameplay.</p>
+            <p>This game is a first person shooter like Wolfenstein 3D, but you enter game inputs by playing music into a microphone. Though it was technically a school project, the assignment was open-ended enough that my partner and I could make whatever we wanted. I wrote the raycasting engine, gameplay, and most of the hardware interfaces from scratch in C. I found <a href = "https://timallanwheeler.com/blog/2023/04/01/wolfenstein-3d-raycasting-in-c/" target = "_blank">Tim Wheeler's raycasting blog</a> useful for learning the key raycasting concepts. Also, my lab partner implemented the Fast Fourier Transform algorithm for the audio processing, and I integrated it into the gameplay.</p>
             <p><a href="https://github.com/Nobbertins/Musical-Monsters" target="_blank">source code</a></p>
         </div>
         <div class="project-media">
@@ -150,7 +150,18 @@
 
     <h2>Longhorn Racing (2025 - Present)</h2>
     <p>I'm currently working on embedded systems software for <a href="https://www.longhornracing.org/" target="_blank">Longhorn Racing</a>'s combustion engine car for the Formula SAE competition. This section contains some of projects I've done in the team.</p>
-    
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Custom Driver Display</h3>
+            <p class="date">September 2025 – May 2026</p>
+            <p>Built and maintained a driver information display for the car using an STM32H7 microcontroller and an LCD. The STM32 reads data from the ECU via the car's CAN bus and displays the data on the LCD. Developed the software in C and C++ using TouchGFX (an embedded graphics library).</p>
+            <p><a href="https://github.com/LHRIC/CustomDisplay" target="_blank">source code</a></p>
+        </div>
+        <div class="project-media">
+            <img src="media/driverdisplay.jpg" alt="the driver display plugged into the car">
+        </div>
+    </div>
     <div class="project">
         <div class="project-content">
             <h3>Automatic Lap Timer</h3>
@@ -159,21 +170,9 @@
             <p><a href="https://github.com/LHRIC/Custom-Lap-Timer" target="_blank">source code</a></p>
         </div>
         <div class="project-media">
+            <img src="media/laptimer.png" alt="lap timer UI">
         </div>
     </div>
-
-    <div class="project">
-        <div class="project-content">
-            <h3>Custom Driver Display</h3>
-            <p class="date">September 2025 – December 2025</p>
-            <p>Built and maintained a driver information display for the car using an STM32H7 microcontroller and an LCD. The STM32 reads data from the ECU via the car's CAN bus and displays the data on the LCD. Developed the software in C and C++ using TouchGFX (an embedded graphics library).</p>
-            <p><a href="https://github.com/LHRIC/CustomDisplay" target="_blank">source code</a></p>
-        </div>
-        <div class="project-media">
-            <img src="media/driverdisplay.jpg" alt="the driver display plugged into the car">
-        </div>
-    </div>
-
     <h2>Robotics Projects (2022 - 2025)</h2>
     <p>In high school, I teamed up with two friends to make year-long robotics projects for science and engineering fairs. I focused on the embedded systems and software for the projects. This section contains the work I did for the 3 projects we made.</p>
     
